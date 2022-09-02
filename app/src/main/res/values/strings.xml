@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Odev2FMSS</string>
+
+    <string name="get_started">Let\'s Get Started</string>
+    <string name="grow_together">Grow Together</string>
+    <string name="join_now">JOIN NOW</string>
 </resources>

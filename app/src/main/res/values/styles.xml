@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="background">
+        <item name="android:layout_width">643dp</item>
+        <item name="android:layout_height">713dp</item>
+    </style>
+
+    <style name="button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="fontFamily">@font/inder_regular_400</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
+    </style>
+
+</resources>
