@@ -1,5 +1,6 @@
 package com.dag.odev2fmss
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -14,5 +15,9 @@ class LoginActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
 
         binding.ibBack.setOnClickListener { finish() }
+
+        binding.tvCreateAccount.setOnClickListener {
+            Intent(this,SignUpActivity::class.java).apply { startActivity(this) }
+        }
     }
 }
