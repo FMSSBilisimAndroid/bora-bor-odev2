@@ -33,4 +33,7 @@
 
     <string name="incorrect_username">Username is incorrect</string>
     <string name="incorrect_password">Password is incorrect</string>
+
+    <string name="sign_up_successful">Sign up successful. Please login</string>
+    <string name="login_successful">Login successful</string>
 </resources>

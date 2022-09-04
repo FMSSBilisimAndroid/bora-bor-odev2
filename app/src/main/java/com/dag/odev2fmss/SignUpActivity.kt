@@ -1,8 +1,8 @@
 package com.dag.odev2fmss
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.datastore.preferences.core.edit
@@ -29,14 +29,13 @@ class SignUpActivity : AppCompatActivity() {
             val isUsernameValid = checkUsername(username)
             val isPasswordValid = checkPassword(password)
 
-            // registering account and starting HomeActivity if the requirements are met
+            // registering account, showing toast, and finishing this activity if the conditions are met
             if (isEmailValid && isUsernameValid && isPasswordValid) {
                 registerAccount(email, username, password)
 
-                Intent(this, HomeActivity::class.java).apply {
-                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(this)
-                }
+                Toast.makeText(this, getString(R.string.sign_up_successful), Toast.LENGTH_SHORT).show()
+
+                finish()
             }
         }
     }
