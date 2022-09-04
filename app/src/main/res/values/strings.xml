@@ -18,4 +18,16 @@
     <string name="create_username">Create Username</string>
     <string name="create_password">Create Password</string>
     <string name="sign_up">Sign Up</string>
+
+    <string name="empty_email">Email required</string>
+    <string name="empty_username">Username required</string>
+    <string name="empty_password">Password required</string>
+
+    <string name="invalid_email">Enter a valid email address</string>
+    <string name="invalid_username">Username can\'t contain any space</string>
+    <string name="invalid_password">Password must be at least 6 characters long</string>
+
+    <string name="home_username">Hi, %s</string>
+    <string name="home_email">Your email address is %s</string>
+    <string name="home_password">Your password is %s</string>
 </resources>

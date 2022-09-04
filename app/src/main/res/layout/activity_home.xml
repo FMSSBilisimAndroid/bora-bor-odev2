@@ -2,11 +2,35 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+
+        <variable
+            name="user"
+            type="com.dag.odev2fmss.User" />
+
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
         tools:context=".HomeActivity">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            style="@style/user_info"
+            android:text="@{@string/home_username(user.username)}"
+            tools:text="Username" />
+
+        <TextView
+            style="@style/user_info"
+            android:text="@{@string/home_email(user.email)}"
+            tools:text="Email" />
+
+        <TextView
+            style="@style/user_info"
+            android:text="@{@string/home_password(user.password)}"
+            tools:text="Password" />
+    </LinearLayout>
 
 </layout>
