@@ -30,4 +30,7 @@
     <string name="home_username">Hi, %s</string>
     <string name="home_email">Your email address is %s</string>
     <string name="home_password">Your password is %s</string>
+
+    <string name="incorrect_username">Username is incorrect</string>
+    <string name="incorrect_password">Password is incorrect</string>
 </resources>
