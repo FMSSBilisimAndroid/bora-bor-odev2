@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.etPassword.text.toString()
 
             // initializing user by getting user information from the disk
-            user = User.getUserInfo(this)
+            user = AuthenticatorImpl(this).getUserInfo()
 
             val isUsernameCorrect = checkUsername(username)
             val isPasswordCorrect = checkPassword(password)

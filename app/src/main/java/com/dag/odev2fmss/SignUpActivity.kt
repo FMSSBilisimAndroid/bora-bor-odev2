@@ -5,9 +5,7 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.datastore.preferences.core.edit
 import com.dag.odev2fmss.databinding.ActivitySignUpBinding
-import kotlinx.coroutines.runBlocking
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -31,7 +29,7 @@ class SignUpActivity : AppCompatActivity() {
 
             // registering account, showing toast, and finishing this activity if the conditions are met
             if (isEmailValid && isUsernameValid && isPasswordValid) {
-                registerAccount(email, username, password)
+                AuthenticatorImpl(this).registerAccount(email, username, password)
 
                 Toast.makeText(this, getString(R.string.sign_up_successful), Toast.LENGTH_SHORT).show()
 
@@ -116,20 +114,5 @@ class SignUpActivity : AppCompatActivity() {
 
         textInputLayout.error = null
         return true
-    }
-
-    /**
-     * Stores user information to the disk.
-     *
-     * @param email a valid email address
-     * @param username a valid username
-     * @param password a valid password
-     */
-    private fun registerAccount(email: String, username: String, password: String) = runBlocking {
-        dataStore.edit { preferences ->
-            preferences[PreferencesKeys.EMAIL] = email
-            preferences[PreferencesKeys.USERNAME] = username
-            preferences[PreferencesKeys.PASSWORD] = password
-        }
     }
 }
